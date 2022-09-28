@@ -25,6 +25,10 @@ section {
     box-shadow: 1px 2px 10px -2px #000;
 }
 
+h1 {
+    margin: 0 0 10px 0;
+}
+
 .box-side-by-side {
     width: 100%;
     display: grid;
@@ -86,8 +90,17 @@ h1 {
 
 label {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: .9rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.box-contato {
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    align-items: start;
+    flex-direction: column;
+    margin: 1rem 0;
 }
 
 
@@ -116,8 +129,10 @@ label {
 }
 
 p {
+    font-weight: 100 !important;
     font-size: .9rem;
     margin: .2rem;
+    font-family: none;
 }
 
 #close {
