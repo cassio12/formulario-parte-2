@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <Head>
+        <title>Form</title>
+        <link href="./style.css"  rel="stylesheet"/>
+    </Head> 
+    <body>
+        <section>
+            <form id="form" method="post">
+                <h1>Entre em comtato para fazer seu Orçamento</h1>
+                <div class="box-side-by-side">
+                    <div class="box-datas">
+                        <label>Name*</label>
+                        <input class="input-iten efectis-config" 
+                        placeholder="Nome"
+                        required/>
+                    </div>
+                    <div class="box-datas">
+                        <label>E-mail*</label>
+                        <input class="input-iten efectis-config"
+                        placeholder="exemplo@email.com"
+                        type="email"
+                        required/>
+                    </div>
+                </div>
+                <div class="box-side-by-side">
+                    <div class="box-datas">
+                        <label>Telefone</label>
+                        <input class="input-iten efectis-config" 
+                        name="phone" 
+                        maxlength="11" 
+                        placeholder="(ex):21-22222222" 
+                        type="tel" 
+                        pattern="[0-9]{2}-[0-9]{8}"/>
+                    </div>
+                    <div class="box-datas">
+                        <label>Celular*</label>
+                        <input class="input-iten efectis-config"
+                        name="phone"
+                        maxlength="12" 
+                        placeholder="(ex):21-999999999" 
+                        type="tel" 
+                        pattern="[0-9]{2}-[0-9]{9}"
+                        required/>    
+                    </div>
+                </div>
+                <div class="box-side-by-side">
+                    <div class="box-datas">
+                        <label>Como conheceu o buffet?</label>
+                        <select class="box-select efectis-config">
+                            <option></option>
+                            <option>Site</option>
+                            <option>Facebook</option>
+                            <option>Instagram</option>
+                            <option>Google</option>
+                            <option>Passei na frente</option>
+                            <option>Outros</option>
+                        </select>
+                    </div>
+                    <div class="box-datas">
+                        <label>Tipo de Evento</label>
+                        <select class="box-select efectis-config">
+                            <option></option>
+                            <option>Festa Infantil</option>
+                            <option>Festa de Debutantes</option>
+                            <option>Festa de Aniversario</option>
+                            <option>Workshop</option>
+                            <option>Outros</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="box-side-by-side">
+                    <div class="box-datas">
+                        <label>Quantidade de Pessoas</label>
+                        <input class="input-iten efectis-config" type="number" min="0"/>
+                    </div>
+                    <div class="box-datas">
+                        <label>Data do Evento</label>
+                        <input class="input-iten efectis-config"  type="date"/>
+                    </div>
+                </div>
+                <div class="box-datas">
+                    <label>Mensagem</label>
+                    <textarea class="textarea-iten efectis-config" ></textarea>
+                </div>
+                <input class="send-btn efectis-config" type="submit"/>
+            </form>
+            <div class="box-overlay">
+                <div class="box-modal-data">
+                    <div>
+                        <button id="close">&#10006;</button>
+                    </div>
+                    <div style="width: 100%;">
+                        <p id="name"><label>Nome: </label></p>
+                        <p id="email"><label>E-mail: </label></p>
+                        <p id="tel"><label>Telefone: </label></p>
+                        <p id="phone"><label>Celular: </label></p>
+                        <p id="buffet"><label>Como conheceu o buffet? </label></p>
+                        <p id="locage"><label>Local do Evento</label></p>
+                        <p id="numberOfPeaple"><label>Quantidade de Pessoas: </label></p>
+                        <p id="date"><label>Data do Evento: </label></p>
+                        <p id="mensagem"><label>Mensagem: </label></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="./index.js"></script>
+    </body>
+</html>
+
+
+
+<!-- Criar um formulário com todos os campos: option, checkbox, select, input, 
+input type... word e imprimir o resultado do material de resposta. -->
