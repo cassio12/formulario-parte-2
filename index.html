@@ -11,13 +11,17 @@
                 <div class="box-side-by-side">
                     <div class="box-datas">
                         <label>Name*</label>
-                        <input class="input-iten efectis-config" 
+                        <input 
+                        id="inName"
+                        class="input-iten efectis-config" 
                         placeholder="Nome"
                         required/>
                     </div>
                     <div class="box-datas">
                         <label>E-mail*</label>
-                        <input class="input-iten efectis-config"
+                        <input 
+                        id="inEmail"
+                        class="input-iten efectis-config"
                         placeholder="exemplo@email.com"
                         type="email"
                         required/>
@@ -26,7 +30,9 @@
                 <div class="box-side-by-side">
                     <div class="box-datas">
                         <label>Telefone</label>
-                        <input class="input-iten efectis-config" 
+                        <input 
+                        id="inTel"
+                        class="input-iten efectis-config" 
                         name="phone" 
                         maxlength="11" 
                         placeholder="(ex):21-22222222" 
@@ -35,7 +41,9 @@
                     </div>
                     <div class="box-datas">
                         <label>Celular*</label>
-                        <input class="input-iten efectis-config"
+                        <input 
+                        id="inCel"
+                        class="input-iten efectis-config"
                         name="phone"
                         maxlength="12" 
                         placeholder="(ex):21-999999999" 
@@ -47,59 +55,71 @@
                 <div class="box-side-by-side">
                     <div class="box-datas">
                         <label>Como conheceu o buffet?</label>
-                        <select class="box-select efectis-config">
-                            <option></option>
-                            <option>Site</option>
-                            <option>Facebook</option>
-                            <option>Instagram</option>
-                            <option>Google</option>
-                            <option>Passei na frente</option>
-                            <option>Outros</option>
+                        <select id="inSelect" class="box-select efectis-config">
+                            <option value="0"></option>
+                            <option value="Site" >Site</option>
+                            <option value="Facebook">Facebook</option>
+                            <option value="Instagram">Instagram</option>
+                            <option value="Google">Google</option>
+                            <option value="Passei-na-frente">Passei na frente</option>
+                            <option value="Outros">Outros</option>
                         </select>
                     </div>
                     <div class="box-datas">
                         <label>Tipo de Evento</label>
-                        <select class="box-select efectis-config">
-                            <option></option>
-                            <option>Festa Infantil</option>
-                            <option>Festa de Debutantes</option>
-                            <option>Festa de Aniversario</option>
-                            <option>Workshop</option>
-                            <option>Outros</option>
+                        <select id="inTypeParty" class="box-select efectis-config">
+                            <option value="0"></option>
+                            <option value="Festa-Infantil">Festa Infantil</option>
+                            <option value="Festa-de-Debutantes">Festa de Debutantes</option>
+                            <option value="Festa-de-Aniversario">Festa de Aniversario</option>
+                            <option value="Workshop">Workshop</option>
+                            <option value="Outros">Outros</option>
                         </select>
                     </div>
                 </div>
                 <div class="box-side-by-side">
                     <div class="box-datas">
                         <label>Quantidade de Pessoas</label>
-                        <input class="input-iten efectis-config" type="number" min="0"/>
+                        <input id="inPeolpe" class="input-iten efectis-config" type="number" min="0"/>
                     </div>
                     <div class="box-datas">
                         <label>Data do Evento</label>
-                        <input class="input-iten efectis-config"  type="date"/>
+                        <input id="inData" class="input-iten efectis-config"  type="date"/>
+                    </div>
+                </div>
+                <div class="box-contato">
+                    <label>Como prefere quem entre em contato:</label>
+                    <div>
+                        <label>E-mail:</label>
+                        <input id="inContact-1" class="input-iten" type="checkbox"/>
+                    </div>
+                    <div>
+                        <label>Celular:</label>
+                        <input id="inContact-2" class="input-iten"  type="checkbox"/>
                     </div>
                 </div>
                 <div class="box-datas">
                     <label>Mensagem</label>
-                    <textarea class="textarea-iten efectis-config" ></textarea>
+                    <textarea id="inMensage" class="textarea-iten efectis-config" ></textarea>
                 </div>
                 <input class="send-btn efectis-config" type="submit"/>
             </form>
-            <div class="box-overlay">
+            <div id="modal" class="box-overlay">
                 <div class="box-modal-data">
                     <div>
                         <button id="close">&#10006;</button>
                     </div>
                     <div style="width: 100%;">
-                        <p id="name"><label>Nome: </label></p>
-                        <p id="email"><label>E-mail: </label></p>
-                        <p id="tel"><label>Telefone: </label></p>
-                        <p id="phone"><label>Celular: </label></p>
-                        <p id="buffet"><label>Como conheceu o buffet? </label></p>
-                        <p id="locage"><label>Local do Evento</label></p>
-                        <p id="numberOfPeaple"><label>Quantidade de Pessoas: </label></p>
-                        <p id="date"><label>Data do Evento: </label></p>
-                        <p id="mensagem"><label>Mensagem: </label></p>
+                        <label>Nome: <p id="name"></p> </label>
+                        <label>E-mail: <p id="email"></p> </label>
+                        <label>Telefone: <p id="tel"></p> </label>
+                        <label>Celular: <p id="phone"></p> </label>
+                        <label>Como conheceu o buffet? <p id="buffet"></p> </label>
+                        <label>Local do Evento: <p id="locage"></p></label>
+                        <label>Quantidade de Pessoas: <p id="numberOfPeaple"></p> </label>            
+                        <label>Data do Evento: <p id="date"></p> </label>
+                        <label>Opção de Contato: <p id="outContact"></p> </label>   
+                        <label>Mensagem: <p id="mensagem"></p> </label>
                     </div>
                 </div>
             </div>
